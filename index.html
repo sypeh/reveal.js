@@ -64,46 +64,185 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 <style type="text/css">
 
 /* スライド全体のフォントの種類、サイズ */
-.reveal .slides
+
+#ipython-main-app {
+    position: relative;
+}
+#jupyter-main-app {
+    position: relative;
+}
+
+div.cell.text_cell.selected.jupyter-soft-selected .input_prompt {
+    border-left: none !important;
+}
+
+div.prompt.input_prompt {
+    font-size: 12pt !important;
+    /*background-color: #2c303c;*/
+    border-top: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding-right: 3px;
+    min-width: 8ex;
+    width: 8ex !important;
+}
+/* スライド全体のフォントの種類、サイズ */
+ .reveal .slides
 {
-    font-size: 20px;
-    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    font-family: "Ricty", monospace;
+    font-size: 28px;
+    font-family: "ヒラギノ丸ゴ ProN","Hiragino Maru Gothic ProN";
+}
+
+ .reveal .slides .red{
+    color: #cf495f;
+    font-weight: bold;
 }
 
 /* 文字の色関係 */
-.reveal .slides :-webkit-any(h1, h2, h3, h4, h5, h6, p, li),
-.reveal .slides div.output_subarea>pre
+ .reveal .slides :-webkit-any(h3, h4, h5, h6, p, li),
+ .reveal .slides div.output_subarea>pre
 {
-    color: white;
+    font-family: "ヒラギノ丸ゴ ProN","Hiragino Maru Gothic ProN";
+    margin: 1px 0;
+    color: #fcf1d3;
 }
 
-/* リンクハイライト */
-.reveal .slides a
+ .reveal .slides div.output_subarea.output_html.renderd_html.output_result>pre
 {
-    color: yellow;
+    color: #fcf1d3;
 }
 
-/* スライド背景色 */
-.reveal
+
+ .reveal .slides :-webkit-any(h1)
 {
-    background-color: Navy;
+    font-family: "ヒラギノ丸ゴ ProN","Hiragino Maru Gothic ProN";
+    position: relative;
+    padding: 0.5em 0.7em;
+    /*margin: 2em 0;*/
+    background: #7aa05d;
+    color: #fcf1d3;
+    font-weight: bold;
+    font-size: 40pt;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+ .reveal .slides :-webkit-any(h1):after
+{
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 30px;
+    border: 20px solid transparent;
+    border-top: 20px solid #7aa05d;
+    width: 0;
+    height: 0;
+}
+
+p {
+    margin: 0; 
+    padding: 0;
+}
+
+ .reveal .slides :-webkit-any(h2) {
+    font-family: "ヒラギノ丸ゴ ProN","Hiragino Maru Gothic ProN";
+    padding: 0 0 0.25em 0.5em;/*上下 左右の余白*/
+    color: #fcf1d3;/*文字色*/
+    background: transparent;/*背景透明に*/
+    border-left: solid 5px #7aa05d;/*左線*/
+    font-size: 42pt;
+}
+
+
+ .reveal .slides a
+{
+    color: #fb9f61;
+}
+
+
+ .reveal
+{
+    background-color: #384152;
     /* element-overrides */
 }
 
-/* In[] の色 */
-.reveal .slides div.prompt.input_prompt
-{
-    color: #58FAF4;
+
+table{
+  border-collapse:collapse;
+  margin:0 auto;
+}
+td,th{
+  padding:10px;
+}
+th{
+  color:#fff;
+  background:#7aa05d;
+}
+table tr:nth-child(odd){
+  background:#e6f2ff;
+}
+table tr:nth-child(even){
+    background:#ffffff;
+}
+td{
+  border-bottom:2px solid #94c273;
 }
 
-/* コードの背景色 表面色 フォントサイズ */
-.reveal .slides code
+
+ .reveal .slides div.prompt.input_prompt
 {
-    background-color: transparent;
+    margin: 1px 0;
+    color: #94c273;
+}
+
+ .reveal .slides div.prompt.output_prompt
+{
+    margin: 1px 0;
+    color: #FF1A40;
+}
+
+
+ .reveal .slides div.warn
+{
+    color: #94c273;
+}
+
+
+ .reveal .slides div.output_subarea.output_html.rendered_html.output_result
+{
+    color: white;
+}
+
+
+ .reveal .slides code
+{
+    font-family: Ricty Diminished;
+    margin: 1px 0;
+    background-color: brack;
     color: white;
     font-size: 60%;
 }
+
+
+ .reveal .slides .container{
+    color: #fcf1d3;/*文字色*/
+    font-family: "ヒラギノ丸ゴ ProN","Hiragino Maru Gothic ProN";
+    display:table;
+    width:100%;
+    height:300px;
+      /*background-color:#eef;*/
+    text-align:center;
+}
+
+ .reveal .slides .container .target{
+    font-size: 100px;
+    display:table-cell;
+    vertical-align:middle;
+}
+
 /*!
 *
 * Twitter Bootstrap
@@ -13349,7 +13488,7 @@ a.anchor-link {
 <div class="output_html rendered_html output_subarea ">
 <style>
     /* スライド全体のフォントの種類、サイズ */
-    .rise-enabled .reveal .slides
+     .reveal .slides
     {
         font-size: 20px;
         font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
@@ -13357,33 +13496,33 @@ a.anchor-link {
     }
 
     /* 文字の色関係 */
-    .rise-enabled .reveal .slides :-webkit-any(h1, h2, h3, h4, h5, h6, p, li),
-    .rise-enabled .reveal .slides div.output_subarea>pre
+     .reveal .slides :-webkit-any(h1, h2, h3, h4, h5, h6, p, li),
+     .reveal .slides div.output_subarea>pre
     {
         color: white;
     }
 
     /* リンクハイライト */
-    .rise-enabled .reveal .slides a
+     .reveal .slides a
     {
         color: yellow;
     }
 
     /* スライド背景色 */
-    .rise-enabled .reveal
+     .reveal
     {
         background-color: Navy;
         /* element-overrides */
     }
 
     /* In[] の色 */
-    .rise-enabled .reveal .slides div.prompt.input_prompt
+     .reveal .slides div.prompt.input_prompt
     {
         color: #58FAF4;
     }
 
     /* コードの背景色 表面色 フォントサイズ */
-    .rise-enabled .reveal .slides code
+     .reveal .slides code
     {
         background-color: transparent;
         color: white;
