@@ -64,47 +64,47 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 <style type="text/css">
 
 /* スライド全体のフォントの種類、サイズ */
-.rise-enabled .reveal .slides
-    {
-        font-size: 20px;
-        font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-        font-family: "Ricty", monospace;
-    }
+.reveal .slides
+{
+    font-size: 20px;
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-family: "Ricty", monospace;
+}
 
-    /* 文字の色関係 */
-    .rise-enabled .reveal .slides :-webkit-any(h1, h2, h3, h4, h5, h6, p, li),
-    .rise-enabled .reveal .slides div.output_subarea>pre
-    {
-        color: white;
-    }
+/* 文字の色関係 */
+.reveal .slides :-webkit-any(h1, h2, h3, h4, h5, h6, p, li),
+.reveal .slides div.output_subarea>pre
+{
+    color: white;
+}
 
-    /* リンクハイライト */
-    .rise-enabled .reveal .slides a
-    {
-        color: yellow;
-    }
+/* リンクハイライト */
+.reveal .slides a
+{
+    color: yellow;
+}
 
-    /* スライド背景色 */
-    .rise-enabled .reveal
-    {
-        background-color: Navy;
-        /* element-overrides */
-    }
+/* スライド背景色 */
+.reveal
+{
+    background-color: Navy;
+    /* element-overrides */
+}
 
-    /* In[] の色 */
-    .rise-enabled .reveal .slides div.prompt.input_prompt
-    {
-        color: #58FAF4;
-    }
+/* In[] の色 */
+.reveal .slides div.prompt.input_prompt
+{
+    color: #58FAF4;
+}
 
-    /* コードの背景色 表面色 フォントサイズ */
-    .rise-enabled .reveal .slides code
-    {
-        background-color: transparent;
-        color: white;
-        font-size: 60%;
-    }
-    /*!
+/* コードの背景色 表面色 フォントサイズ */
+.reveal .slides code
+{
+    background-color: transparent;
+    color: white;
+    font-size: 60%;
+}
+/*!
 *
 * Twitter Bootstrap
 *
