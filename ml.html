@@ -73,7 +73,6 @@ if( window.location.search.match( /print-pdf/gi ) ) {
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-
 #ipython-main-app {
       position: relative;
   }
@@ -106,6 +105,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
    .reveal .slides .red{
       color: #cf495f;
       font-weight: bold;
+      overflow-y: scroll;
   }
 
   /* 文字の色関係 */
@@ -177,6 +177,12 @@ if( window.location.search.match( /print-pdf/gi ) ) {
       background-color: #384152;
       /* element-overrides */
   }
+
+  .scrollable {
+    bottom: 0px;
+    overflow-y: auto  !important;
+    overflow-x: hidden !important;
+}
 
 
   table{
@@ -250,10 +256,6 @@ if( window.location.search.match( /print-pdf/gi ) ) {
       font-size: 100px;
       display:table-cell;
       vertical-align:middle;
-  }
-  
-  code {
-      color: black
   }
 
 html {
@@ -13411,7 +13413,7 @@ a.anchor-link {
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="custom.css">
+<!-- <link rel="stylesheet" href="custom.css"> -->
 
 </head>
 
@@ -13487,7 +13489,15 @@ a.anchor-link {
 </ul>
 </li>
 </ul>
-<p><img src="./slide_images/Preprocessing.png"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>前処理のイメージ
+<img src="./slide_images/Preprocessing.png"></p>
 
 </div>
 </div>
@@ -13551,7 +13561,7 @@ scikit-learnは以下のように行う</p>
 
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13560,7 +13570,7 @@ scikit-learnは以下のように行う</p>
 
 </div>
 </div>
-</div><div class="fragment">
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -13581,7 +13591,7 @@ scikit-learnは以下のように行う</p>
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div></section></section><section class="scrollable"><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13596,7 +13606,7 @@ scikit-learnは以下のように行う</p>
 </ul>
 </li>
 </ul>
-<p><img src="./slide_images/Dimensionality reduction.png"></p>
+<p><img src="./slide_images/Dimensionalityreduction.png"></p>
 
 </div>
 </div>
@@ -13784,7 +13794,7 @@ MAE、MSE、RMSE、RMSLEに関しては0に近い程、精度が良い</p>
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></section></section><section class="scrollable"><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13959,19 +13969,7 @@ MAE、MSE、RMSE、RMSLEに関しては0に近い程、精度が良い</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></section></section>
+</section></section>
 </div>
 </div>
 
